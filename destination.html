@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgia Tourism - Destinations</title>
+    <link rel="icon" href="icon.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+        a { text-decoration: none; color: inherit; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .first-h2 {
+            color: #272727;
+            font-size: 24px;
+            margin: 0;
+            padding: 10px 0;
+                        font-weight: 500;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        header a {
+            text-decoration: none;
+            color: #272727;
+            font-size: 18px;
+            padding: 10px;
+        }
+        @media (max-width: 720px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 10px;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 12px;
+                flex-wrap: nowrap;
+            }
+            header a {
+                font-size: 12px;
+                padding: 6px 4px;
+                white-space: nowrap;
+            }
+            .first-h2 {
+                font-size: 20px;
+            }
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background-image: url(1.jpg);
+            background-size: cover;
+            color: #000000;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+        .destinations {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .destination-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .destination-card h3 {
+            font-size: 22px;
+            margin: 12px 16px 8px 16px;
+            color: #222;
+        }
+        .destination-card p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 16px 16px 16px;
+        }
+        @media (max-width: 720px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            font-size: 14px;
+        }
+        .full-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            animation-name: slideRight;
+            animation-duration: 1s;
+        }
+        @keyframes slideRight {
+            from { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2 class="first-h2">GEORGIA TOURISM</h2>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="aboutus.html">ABOUT</a>
+        <a href="destination.html">DESTINATIONS</a>
+        <a href="contact.html">BOOK NOW</a>
+    </div>
+</header>
+<hr>
+    <div class="full-image">
+        <img src="FINAL.png" alt="Georgia Image">
+    </div>
+    <br>
+    <br>
+    <hr>
+<section class="destinations">
+    <div class="destination-card">
+        <img src="bakuriani.jpg" alt="Bakuriani">
+        <h3>Bakuriani</h3>
+        <p>A popular ski resort surrounded by lush pine forests and stunning alpine views.</p>
+    <a href="bakuriani.html" style="text-decoration:none;">
+        <button style="background-color:#000000; color:white; border:none; padding:10px 20px; border-radius:8px; font-size:16px; cursor:pointer; margin:10px auto; display:block; transition:0.3s;" ">
+            Book Now
+        </button>
+    </a>
+    </div>
+    <div class="destination-card">
+        <img src="svaneti.jpg" alt="Svaneti">
+        <h3>Svaneti</h3>
+        <p>Known for its medieval towers, rugged mountains, and rich cultural heritage.</p>
+            <a href="svaneti.html" style="text-decoration:none;">
+        <button style="background-color:#000000; color:white; border:none; padding:10px 20px; border-radius:8px; font-size:16px; cursor:pointer; margin:10px auto; display:block;" >
+            Book Now
+        </button>
+    </a>
+    </div>
+    <div class="destination-card">
+        <img src="tbilisi.jpg" alt="Tbilisi">
+        <h3>Tbilisi</h3>
+        <p>The vibrant capital city, famous for its old town, architecture, and lively streets.</p>
+            <a href="tbilisi.html" style="text-decoration:none;">
+        <button style="background-color:#000000; color:white; border:none; padding:10px 20px; border-radius:8px; font-size:16px; cursor:pointer; margin:10px auto; display:block; transition:0.3s;" >
+            Book Now
+        </button>
+    </a>
+    </div>
+    <div class="destination-card">
+        <img src="kazbegi.jpg" alt="Kazbegi">
+        <h3>Kazbegi</h3>
+        <p>Home to Mount Kazbegi and the iconic Gergeti Trinity Church with breathtaking views.</p>
+            <a href="kazbegi.html" style="text-decoration:none;">
+        <button style="background-color:#000000; color:white; border:none; padding:10px 20px; border-radius:8px; font-size:16px; cursor:pointer; margin:10px auto; display:block; transition:0.3s;" >
+            Book Now
+        </button>
+    </a>
+    </div>
+    <div class="destination-card">
+        <img src="batumi.jpg" alt="Batumi">
+        <h3>Batumi</h3>
+        <p>Georgia's seaside gem with a modern skyline, beaches, and vibrant nightlife.</p>
+            <a href="batumi.html" style="text-decoration:none;">
+        <button style="background-color:#000000; color:white; border:none; padding:10px 20px; border-radius:8px; font-size:16px; cursor:pointer; margin:10px auto; display:block; transition:0.3s;" >
+            Book Now
+        </button>
+    </a>
+    </div>
+    <div class="destination-card">
+        <img src="mtskheta.jpg" alt="Mtskheta">
+        <h3>Mtskheta</h3>
+        <p>The ancient capital with UNESCO-listed churches and deep historical significance.</p>
+            <a href="mtskheta.html" style="text-decoration:none;">
+        <button style="background-color:#000000; color:white; border:none; padding:10px 20px; border-radius:8px; font-size:16px; cursor:pointer; margin:10px auto; display:block; transition:0.3s;" >
+            Book Now
+        </button>
+    </a>
+    </div>
+</section>
+<br>
+<footer>
+    &copy; 2025 Georgia Tourism. All Rights Reserved.
+</footer>
+</body>
+</html>

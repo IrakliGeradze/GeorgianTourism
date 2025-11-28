@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GOA Tourism - Contact</title>
+    <link rel="icon" href="icon.png">
+    <style>
+        :root {
+            --accent:#414141;
+            --muted:#6b7280;
+            --card-bg:#fff;
+            --radius:12px;
+            --gap:20px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .first-h2 {
+            color: #272727;
+            font-size: 24px;
+            margin: 0;
+            padding: 10px 0;
+            font-weight: 500;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        header a {
+            text-decoration: none;
+            color: #272727;
+            font-size: 18px;
+            padding: 10px;
+        }
+        .destinations {
+            max-width: 500px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .destination-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .destination-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .destination-card h3 {
+            font-size: 22px;
+            margin: 12px 16px 8px 16px;
+            color: #222;
+        }
+        .destination-card p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 16px 16px 16px;
+        }
+        @media (max-width: 720px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 10px;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 12px;
+                flex-wrap: nowrap;
+            }
+            header a {
+                font-size: 12px;
+                padding: 6px 4px;
+                white-space: nowrap;
+            }
+            .first-h2 {
+                font-size: 20px;
+            }
+        }
+        main.card {
+            max-width: 600px;
+            margin: var(--gap) auto 0;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 18px rgba(10, 20, 30, 0.06);
+            width: 90%;
+        }
+        form { display: grid; gap: 16px; }
+        label {
+            font-weight: 500;
+            margin-bottom: 4px;
+            display: block;
+        }
+        input, textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            width: 100%;
+        }
+        .btn {
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .office-info {
+            margin-top: 24px;
+            color: var(--muted);
+            border-top: 1px solid #eee;
+            padding-top: 24px;
+            display: grid;
+            gap: 16px;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2 class="first-h2">GEORGIA TOURISM</h2>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="aboutus.html">ABOUT</a>
+        <a href="destination.html">DESTINATIONS</a>
+        <a href="contact.html">BOOK NOW</a>
+    </div>
+</header>
+<hr>
+<section class="destinations">
+    <div class="destination-card">
+        <img src="kazbegi.jpg" alt="Bakuriani">
+        <h3>You Have Choosen Kazbegi</h3>
+        <p>Home to Mount Kazbek and the iconic Gergeti Trinity Church with breathtaking views.</p>
+</div>
+</section>
+    </div>
+<main class="card">
+    <h2 id="contactHeading"></h2>
+    <p id="contactIntro" style="margin-bottom: 24px;">
+        <p style="text-align: center;color: white ; background-color: rgb(0, 0, 0); border-radius: 15px;">Kazbegi Trip Will Be 400 GEL</p>
+    </p>
+    <form onsubmit="redirectToPayment(event)">
+        <div>
+            <label for="cname">Your name</label>
+            <input id="cname" required>
+        </div>
+        <div>
+            <label for="Number">How many people?</label>
+            <input id="Number" required>
+        </div>
+        <div>
+            <label for="cphone">Phone Number</label>
+            <input id="cphone" required>
+        </div>
+        <div>
+            <label for="cemail">Email</label>
+            <input id="cemail" type="email" required>
+        </div>
+        <label for="check">Luka Gurgenidze and Giorgi Varadashvili is responsible for all this if something does'not work just to know im gone and ask them anything :()</label>
+        <button class="btn" type="submit"><a href="https://paypal.me/natalieadsh" style="text-decoration: none; font-size: 15px; color: white;">Pay</a></button>
+    </form>
+    <div class="office-info">
+        <div class="info-item">
+            <span>Tbilisi, Georgia</span>
+        </div>
+        <div class="info-item">
+            <span>Phone: +995 555 555 555</span>
+        </div>
+    </div>
+    
+</main>
+
+<script>
+function redirectToPayment(event) {
+    event.preventDefault();
+    const name = document.getElementById('cname').value;
+    const phone = document.getElementById('cphone').value;
+    const email = document.getElementById('cemail').value;
+    const message = document.getElementById('cmsg').value;
+    window.location.href = "https://paypal.me/natalieadsh";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    &copy; 2025 Georgia Tourism. All Rights Reserved.
+</footer>
+</body>
+</html>
